@@ -1,3 +1,4 @@
+import 'package:athlete_platform1/screens/group_details.dart';
 import 'package:athlete_platform1/screens/group_listing.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +16,7 @@ class _MyAppState extends State<MyApp> {
       initialRoute: GroupListing.id,
       routes: {
         GroupListing.id: (context) => GroupListing(),
+        GroupDetails.id: (context) => GroupDetails(),
       },
     );
   }

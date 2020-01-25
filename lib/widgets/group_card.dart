@@ -1,3 +1,4 @@
+import 'package:athlete_platform1/widgets/member_images.dart';
 import 'package:flutter/material.dart';
 
 class GroupCard extends StatelessWidget {
@@ -9,6 +10,7 @@ class GroupCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(10),
+      margin: EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
         color: Color(0xFFF5F5F5),
         shape: BoxShape.rectangle,
@@ -16,11 +18,36 @@ class GroupCard extends StatelessWidget {
       ),
       child: Column(
         children: <Widget>[
-          Image.asset(
-            'images/center_card.jpg',
+          Container(
             height: 210,
             width: double.infinity,
-            fit: BoxFit.cover,
+            constraints: BoxConstraints.tightFor(),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('images/center_card.jpg'),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: Align(
+              alignment: Alignment.topRight,
+              child: DropdownButton(
+                icon: Icon(
+                  Icons.more_vert,
+                ),
+                elevation: 0,
+                onChanged: (value) {},
+                items: <DropdownMenuItem>[
+                  DropdownMenuItem(
+                    child: Text('Edit'),
+                    value: 'Edit',
+                  ),
+                  DropdownMenuItem(
+                    child: Text('Delete'),
+                    value: 'Delete',
+                  ),
+                ],
+              ),
+            ),
           ),
           SizedBox(
             height: 15,
@@ -40,48 +67,7 @@ class GroupCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              Container(
-                padding: const EdgeInsets.all(8.0),
-                height: 58.0,
-                width: 200.0,
-                child: Stack(
-                  children: <Widget>[
-                    CircleAvatar(
-                      radius: 20,
-                      backgroundImage: AssetImage(
-                        'images/person3.jpg',
-                      ),
-                    ),
-                    Positioned(
-                      left: 30.0,
-                      child: CircleAvatar(
-                        radius: 20,
-                        backgroundImage: AssetImage(
-                          'images/person1.jpg',
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      left: 60.0,
-                      child: CircleAvatar(
-                        radius: 20,
-                        backgroundImage: AssetImage(
-                          'images/person2.jpg',
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      left: 90.0,
-                      child: CircleAvatar(
-                        radius: 20,
-                        backgroundImage: AssetImage(
-                          'images/person3.jpg',
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              MemberImages(),
               FlatButton(
                 child: Text(
                   'Members',
