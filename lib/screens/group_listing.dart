@@ -66,7 +66,7 @@ class _GroupListingState extends State<GroupListing> {
             style: TextStyle(
               color: Color(0xFF555555),
               fontSize: 40,
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.w900,
               fontFamily: 'Muli',
             ),
           ),
@@ -119,41 +119,36 @@ class _GroupListingState extends State<GroupListing> {
         ),
         body: Stack(
           children: <Widget>[
-            DefaultTabController(
-              length: 2,
-              child: Stack(
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.only(top: 20),
-                    child: SizedBox(
-                      child: TabBarView(
-                        children: <Widget>[
-                          SingleChildScrollView(
-                            child: Column(
-                              children: <Widget>[
-                                GroupCard(),
-                                GroupCard(),
-                                GroupCard(),
-                              ],
-                            ),
-                          ),
-                          SingleChildScrollView(
-                            child: Column(
-                              children: <Widget>[
-                                GroupCard(),
-                                GroupCard(),
-                                GroupCard(),
-                                GroupCard(),
-                                GroupCard(),
-                              ],
-                            ),
-                          ),
-                        ],
+            Stack(
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: TabBarView(
+                    children: <Widget>[
+                      SingleChildScrollView(
+                        child: Column(
+                          children: <Widget>[
+                            GroupCard(),
+                            GroupCard(),
+                            GroupCard(),
+                          ],
+                        ),
                       ),
-                    ),
+                      SingleChildScrollView(
+                        child: Column(
+                          children: <Widget>[
+                            GroupCard(),
+                            GroupCard(),
+                            GroupCard(),
+                            GroupCard(),
+                            GroupCard(),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),
