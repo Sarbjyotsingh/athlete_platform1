@@ -31,29 +31,32 @@ class GroupCard extends StatelessWidget {
             ),
             child: Align(
               alignment: Alignment.topRight,
-              child: DropdownButton(
-                icon: Container(
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0xFF333333).withOpacity(0.5),
+              child: DropdownButtonHideUnderline(
+                child: DropdownButton(
+                  icon: Container(
+                    padding: EdgeInsets.all(3),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Color(0xFF333333).withOpacity(0.5),
+                    ),
+                    child: Icon(
+                      Icons.more_vert,
+                      color: Color(0xFFe1e1e1),
+                    ),
                   ),
-                  child: Icon(
-                    Icons.more_vert,
-                    color: Color(0xFFe1e1e1),
-                  ),
+                  elevation: 0,
+                  onChanged: (value) {},
+                  items: <DropdownMenuItem>[
+                    DropdownMenuItem(
+                      child: Text('Edit'),
+                      value: 'Edit',
+                    ),
+                    DropdownMenuItem(
+                      child: Text('Delete'),
+                      value: 'Delete',
+                    ),
+                  ],
                 ),
-                elevation: 0,
-                onChanged: (value) {},
-                items: <DropdownMenuItem>[
-                  DropdownMenuItem(
-                    child: Text('Edit'),
-                    value: 'Edit',
-                  ),
-                  DropdownMenuItem(
-                    child: Text('Delete'),
-                    value: 'Delete',
-                  ),
-                ],
               ),
             ),
           ),
