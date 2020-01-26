@@ -1,3 +1,4 @@
+import 'package:athlete_platform1/screens/group_details.dart';
 import 'package:athlete_platform1/widgets/member_images.dart';
 import 'package:flutter/material.dart';
 
@@ -18,44 +19,49 @@ class GroupCard extends StatelessWidget {
       ),
       child: Column(
         children: <Widget>[
-          Container(
-            height: 150,
-            width: double.infinity,
-            constraints: BoxConstraints.tightFor(),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('images/center_card.jpg'),
-                fit: BoxFit.cover,
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, GroupDetails.id);
+            },
+            child: Container(
+              height: 150,
+              width: double.infinity,
+              constraints: BoxConstraints.tightFor(),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('images/center_card.jpg'),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(5),
               ),
-              borderRadius: BorderRadius.circular(5),
-            ),
-            child: Align(
-              alignment: Alignment.topRight,
-              child: DropdownButtonHideUnderline(
-                child: DropdownButton(
-                  icon: Container(
-                    padding: EdgeInsets.all(3),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color(0xFF333333).withOpacity(0.5),
+              child: Align(
+                alignment: Alignment.topRight,
+                child: DropdownButtonHideUnderline(
+                  child: DropdownButton(
+                    icon: Container(
+                      padding: EdgeInsets.all(3),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color(0xFF333333).withOpacity(0.5),
+                      ),
+                      child: Icon(
+                        Icons.more_vert,
+                        color: Color(0xFFe1e1e1),
+                      ),
                     ),
-                    child: Icon(
-                      Icons.more_vert,
-                      color: Color(0xFFe1e1e1),
-                    ),
+                    elevation: 0,
+                    onChanged: (value) {},
+                    items: <DropdownMenuItem>[
+                      DropdownMenuItem(
+                        child: Text('Edit'),
+                        value: 'Edit',
+                      ),
+                      DropdownMenuItem(
+                        child: Text('Delete'),
+                        value: 'Delete',
+                      ),
+                    ],
                   ),
-                  elevation: 0,
-                  onChanged: (value) {},
-                  items: <DropdownMenuItem>[
-                    DropdownMenuItem(
-                      child: Text('Edit'),
-                      value: 'Edit',
-                    ),
-                    DropdownMenuItem(
-                      child: Text('Delete'),
-                      value: 'Delete',
-                    ),
-                  ],
                 ),
               ),
             ),
@@ -63,13 +69,18 @@ class GroupCard extends StatelessWidget {
           SizedBox(
             height: 15,
           ),
-          Text(
-            '2019 Holiday 4\'s Beach Volleyball Tournament.',
-            style: TextStyle(
-              fontSize: 17,
-              fontFamily: 'Muli',
-              fontWeight: FontWeight.w700,
-              color: Color(0xFF555555),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, GroupDetails.id);
+            },
+            child: Text(
+              '2019 Holiday 4\'s Beach Volleyball Tournament.',
+              style: TextStyle(
+                fontSize: 17,
+                fontFamily: 'Muli',
+                fontWeight: FontWeight.w700,
+                color: Color(0xFF555555),
+              ),
             ),
           ),
           SizedBox(

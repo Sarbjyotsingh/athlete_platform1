@@ -25,7 +25,7 @@ class MemberImages extends StatelessWidget {
             child: CircleAvatar(
               radius: 19,
               backgroundImage: AssetImage(
-                'images/person3.jpg',
+                'images/person2.jpg',
               ),
             ),
           ),
@@ -60,7 +60,7 @@ class MemberImages extends StatelessWidget {
               child: CircleAvatar(
                 radius: 19,
                 backgroundImage: AssetImage(
-                  'images/person3.jpg',
+                  'images/person2.jpg',
                 ),
               ),
             ),
@@ -78,7 +78,7 @@ class MemberImages extends StatelessWidget {
               child: CircleAvatar(
                 radius: 19,
                 backgroundImage: AssetImage(
-                  'images/person2.jpg',
+                  'images/person1.jpg',
                 ),
               ),
             ),
@@ -96,7 +96,7 @@ class MemberImages extends StatelessWidget {
               child: CircleAvatar(
                 radius: 19,
                 backgroundImage: AssetImage(
-                  'images/person3.jpg',
+                  'images/person2.jpg',
                 ),
               ),
             ),
