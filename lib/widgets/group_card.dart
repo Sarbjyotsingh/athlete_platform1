@@ -1,3 +1,4 @@
+import 'package:athlete_platform1/screens/edit_group.dart';
 import 'package:athlete_platform1/screens/group_details.dart';
 import 'package:athlete_platform1/widgets/member_images.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +52,11 @@ class GroupCard extends StatelessWidget {
                       ),
                     ),
                     elevation: 0,
-                    onChanged: (value) {},
+                    onChanged: (value) {
+                      if (value == 'Edit') {
+                        Navigator.pushNamed(context, EditGroup.id);
+                      }
+                    },
                     items: <DropdownMenuItem>[
                       DropdownMenuItem(
                         child: Text('Edit'),

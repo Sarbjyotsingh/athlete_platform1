@@ -1,3 +1,4 @@
+import 'package:athlete_platform1/screens/edit_group.dart';
 import 'package:athlete_platform1/widgets/member_images.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +15,9 @@ class _GroupDetailsState extends State<GroupDetails> {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
         label: Text(
-          '   Start Discussion   ',
+          'Start Discussion',
           style: TextStyle(
-            fontSize: 16.0,
+            fontSize: 14.0,
             fontFamily: 'Muli',
             fontWeight: FontWeight.w700,
           ),
@@ -68,7 +69,11 @@ class _GroupDetailsState extends State<GroupDetails> {
                               ),
                             ),
                             elevation: 0,
-                            onChanged: (value) {},
+                            onChanged: (value) {
+                              if (value == 'Edit') {
+                                Navigator.pushNamed(context, EditGroup.id);
+                              }
+                            },
                             items: <DropdownMenuItem>[
                               DropdownMenuItem(
                                 child: Text('Edit'),
@@ -140,7 +145,7 @@ class _GroupDetailsState extends State<GroupDetails> {
                           Text(
                             '2019 Holiday 4\'s Beach Volleyball Tournament.',
                             style: TextStyle(
-                              fontSize: 17,
+                              fontSize: 18,
                               fontFamily: 'Muli',
                               fontWeight: FontWeight.w700,
                             ),
@@ -156,7 +161,7 @@ class _GroupDetailsState extends State<GroupDetails> {
                                 ),
                               ),
                               child: CircleAvatar(
-                                radius: 20,
+                                radius: 18,
                                 backgroundImage: AssetImage(
                                   'images/person1.jpg',
                                 ),

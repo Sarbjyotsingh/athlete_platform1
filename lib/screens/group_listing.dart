@@ -1,3 +1,4 @@
+import 'package:athlete_platform1/screens/create_group.dart';
 import 'package:athlete_platform1/widgets/group_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -96,7 +97,9 @@ class _GroupListingState extends State<GroupListing> {
                 textColor: Color(0xFFf01b01),
                 highlightColor: Colors.transparent,
                 splashColor: Colors.transparent,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, CreateGroup.id);
+                },
               ),
             ),
           ],

@@ -1,3 +1,5 @@
+import 'package:athlete_platform1/screens/create_group.dart';
+import 'package:athlete_platform1/screens/edit_group.dart';
 import 'package:athlete_platform1/screens/group_details.dart';
 import 'package:athlete_platform1/screens/group_listing.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +19,8 @@ class _MyAppState extends State<MyApp> {
       routes: {
         GroupListing.id: (context) => GroupListing(),
         GroupDetails.id: (context) => GroupDetails(),
+        CreateGroup.id: (context) => CreateGroup(),
+        EditGroup.id: (context) => EditGroup(),
       },
     );
   }

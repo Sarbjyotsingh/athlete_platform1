@@ -23,7 +23,7 @@ class MemberImages extends StatelessWidget {
               ),
             ),
             child: CircleAvatar(
-              radius: 19,
+              radius: 18,
               backgroundImage: AssetImage(
                 'images/person2.jpg',
               ),
@@ -40,7 +40,7 @@ class MemberImages extends StatelessWidget {
                 ),
               ),
               child: CircleAvatar(
-                radius: 19,
+                radius: 18,
                 backgroundImage: AssetImage(
                   'images/person1.jpg',
                 ),
@@ -58,7 +58,7 @@ class MemberImages extends StatelessWidget {
                 ),
               ),
               child: CircleAvatar(
-                radius: 19,
+                radius: 18,
                 backgroundImage: AssetImage(
                   'images/person2.jpg',
                 ),
@@ -76,7 +76,7 @@ class MemberImages extends StatelessWidget {
                 ),
               ),
               child: CircleAvatar(
-                radius: 19,
+                radius: 18,
                 backgroundImage: AssetImage(
                   'images/person1.jpg',
                 ),
@@ -94,7 +94,7 @@ class MemberImages extends StatelessWidget {
                 ),
               ),
               child: CircleAvatar(
-                radius: 19,
+                radius: 18,
                 backgroundImage: AssetImage(
                   'images/person2.jpg',
                 ),
@@ -112,7 +112,7 @@ class MemberImages extends StatelessWidget {
                 ),
               ),
               child: CircleAvatar(
-                radius: 19,
+                radius: 18,
                 child: Text(
                   '+56',
                   style: TextStyle(
