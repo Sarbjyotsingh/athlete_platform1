@@ -39,6 +39,7 @@ class GroupCard extends StatelessWidget {
                 child: DropdownButtonHideUnderline(
                   child: DropdownButton(
                     icon: Container(
+                      margin: EdgeInsets.only(right: 5),
                       padding: EdgeInsets.all(3),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,

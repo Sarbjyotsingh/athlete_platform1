@@ -54,11 +54,32 @@ class _GroupDetailsState extends State<GroupDetails> {
                             Navigator.pop(context);
                           },
                         ),
-                        IconButton(
-                          icon: Icon(
-                            Icons.more_vert,
+                        DropdownButtonHideUnderline(
+                          child: DropdownButton(
+                            icon: Container(
+                              padding: EdgeInsets.all(3),
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color(0xFF333333).withOpacity(0.5),
+                              ),
+                              child: Icon(
+                                Icons.more_vert,
+                                color: Color(0xFFe1e1e1),
+                              ),
+                            ),
+                            elevation: 0,
+                            onChanged: (value) {},
+                            items: <DropdownMenuItem>[
+                              DropdownMenuItem(
+                                child: Text('Edit'),
+                                value: 'Edit',
+                              ),
+                              DropdownMenuItem(
+                                child: Text('Delete'),
+                                value: 'Delete',
+                              ),
+                            ],
                           ),
-                          onPressed: () {},
                         ),
                       ],
                     ),
@@ -182,6 +203,9 @@ class _GroupDetailsState extends State<GroupDetails> {
                       ),
                     ),
                   ],
+                ),
+                SizedBox(
+                  height: 70,
                 ),
               ],
             ),
