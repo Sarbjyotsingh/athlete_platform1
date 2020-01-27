@@ -2,6 +2,7 @@ import 'package:athlete_platform1/screens/create_group.dart';
 import 'package:athlete_platform1/screens/edit_group.dart';
 import 'package:athlete_platform1/screens/group_details.dart';
 import 'package:athlete_platform1/screens/group_listing.dart';
+import 'package:athlete_platform1/screens/member_listing.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -21,6 +22,7 @@ class _MyAppState extends State<MyApp> {
         GroupDetails.id: (context) => GroupDetails(),
         CreateGroup.id: (context) => CreateGroup(),
         EditGroup.id: (context) => EditGroup(),
+        MemberListing.id: (context) => MemberListing(),
       },
     );
   }

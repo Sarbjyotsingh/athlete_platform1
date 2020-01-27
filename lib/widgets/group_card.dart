@@ -1,5 +1,6 @@
 import 'package:athlete_platform1/screens/edit_group.dart';
 import 'package:athlete_platform1/screens/group_details.dart';
+import 'package:athlete_platform1/screens/member_listing.dart';
 import 'package:athlete_platform1/widgets/member_images.dart';
 import 'package:flutter/material.dart';
 
@@ -89,33 +90,32 @@ class GroupCard extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: 15,
-          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              Stack(
-                overflow: Overflow.visible,
-                alignment: Alignment.center,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  MemberImages(),
-                  Positioned(
-                    left: 190,
-                    child: FlatButton(
-                      child: Text(
-                        'Members',
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          fontFamily: 'Muli',
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xFF555555),
-                        ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, MemberListing.id);
+                    },
+                    child: MemberImages(),
+                  ),
+                  FlatButton(
+                    child: Text(
+                      'Members',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        fontFamily: 'Muli',
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF555555),
                       ),
-                      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                      textColor: Color(0xFF555555),
-                      onPressed: () {},
                     ),
+                    textColor: Color(0xFF555555),
+                    onPressed: () {
+                      Navigator.pushNamed(context, MemberListing.id);
+                    },
                   ),
                 ],
               ),

@@ -1,3 +1,4 @@
+import 'package:athlete_platform1/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
 class MemberImages extends StatelessWidget {
@@ -9,8 +10,8 @@ class MemberImages extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(8.0),
-      height: 58.0,
-      width: 200.0,
+      height: 48.0,
+      width: 160.0,
       child: Stack(
         overflow: Overflow.visible,
         children: <Widget>[
@@ -23,14 +24,14 @@ class MemberImages extends StatelessWidget {
               ),
             ),
             child: CircleAvatar(
-              radius: 18,
+              radius: kMemberImageRadius,
               backgroundImage: AssetImage(
                 'images/person2.jpg',
               ),
             ),
           ),
           Positioned(
-            left: 30.0,
+            left: 25.0,
             child: Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
@@ -40,7 +41,7 @@ class MemberImages extends StatelessWidget {
                 ),
               ),
               child: CircleAvatar(
-                radius: 18,
+                radius: kMemberImageRadius,
                 backgroundImage: AssetImage(
                   'images/person1.jpg',
                 ),
@@ -48,7 +49,7 @@ class MemberImages extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 60.0,
+            left: 50.0,
             child: Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
@@ -58,7 +59,7 @@ class MemberImages extends StatelessWidget {
                 ),
               ),
               child: CircleAvatar(
-                radius: 18,
+                radius: kMemberImageRadius,
                 backgroundImage: AssetImage(
                   'images/person2.jpg',
                 ),
@@ -66,7 +67,7 @@ class MemberImages extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 90.0,
+            left: 75.0,
             child: Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
@@ -76,7 +77,7 @@ class MemberImages extends StatelessWidget {
                 ),
               ),
               child: CircleAvatar(
-                radius: 18,
+                radius: kMemberImageRadius,
                 backgroundImage: AssetImage(
                   'images/person1.jpg',
                 ),
@@ -84,7 +85,7 @@ class MemberImages extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 120.0,
+            left: 100.0,
             child: Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
@@ -94,7 +95,7 @@ class MemberImages extends StatelessWidget {
                 ),
               ),
               child: CircleAvatar(
-                radius: 18,
+                radius: kMemberImageRadius,
                 backgroundImage: AssetImage(
                   'images/person2.jpg',
                 ),
@@ -102,27 +103,34 @@ class MemberImages extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 150.0,
+            left: 125.0,
             child: Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
+                color: Colors.black.withOpacity(0.7).withOpacity(1),
                 border: Border.all(
                   color: Colors.grey.shade800,
                   width: 1,
                 ),
               ),
               child: CircleAvatar(
-                radius: 18,
-                child: Text(
-                  '+56',
-                  style: TextStyle(
-                    fontFamily: 'Muli',
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
+                radius: kMemberImageRadius,
                 backgroundImage: AssetImage(
                   'images/person1.jpg',
                 ),
+              ),
+            ),
+          ),
+          Positioned(
+            left: 127.0,
+            top: 8,
+            child: Text(
+              '+56',
+              style: TextStyle(
+                fontFamily: 'Muli',
+                fontWeight: FontWeight.w600,
+                fontSize: 12,
+                color: Colors.white,
               ),
             ),
           ),

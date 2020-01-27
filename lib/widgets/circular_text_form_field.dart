@@ -15,14 +15,15 @@ class CircularTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 45,
       margin: EdgeInsets.only(top: 5),
-      padding: EdgeInsets.only(left: 20, top: 2, bottom: 2, right: 20),
+      padding: EdgeInsets.only(left: 20, top: 0, bottom: 0, right: 20),
       decoration: BoxDecoration(
         color: textFieldColor,
         shape: BoxShape.rectangle,
         borderRadius: BorderRadius.horizontal(
-          left: Radius.circular(100),
-          right: Radius.circular(100),
+          left: Radius.circular(30),
+          right: Radius.circular(30),
         ),
         border: Border.all(
           color: borderColor,

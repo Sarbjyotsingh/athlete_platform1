@@ -1,4 +1,5 @@
 import 'package:athlete_platform1/screens/edit_group.dart';
+import 'package:athlete_platform1/screens/member_listing.dart';
 import 'package:athlete_platform1/widgets/member_images.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -108,7 +109,12 @@ class _GroupDetailsState extends State<GroupDetails> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    MemberImages(),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, MemberListing.id);
+                      },
+                      child: MemberImages(),
+                    ),
                     FlatButton(
                       child: Container(
                         padding: EdgeInsets.all(5),
