@@ -1,15 +1,14 @@
-import 'package:athlete_platform1/screens/invite_member.dart';
 import 'package:athlete_platform1/widgets/ButtonWithUnderline.dart';
 import 'package:athlete_platform1/widgets/memeber_detail_card.dart';
 import 'package:flutter/material.dart';
 
-class MemberListing extends StatefulWidget {
-  static const String id = 'member_listing';
+class InviteMember extends StatefulWidget {
+  static const String id = 'invite_member';
   @override
-  _MemberListingState createState() => _MemberListingState();
+  _InviteMemberState createState() => _InviteMemberState();
 }
 
-class _MemberListingState extends State<MemberListing> {
+class _InviteMemberState extends State<InviteMember> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +27,7 @@ class _MemberListingState extends State<MemberListing> {
               width: 10,
             ),
             Text(
-              'Member',
+              'Invite Member',
               style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'Muli',
@@ -39,7 +38,7 @@ class _MemberListingState extends State<MemberListing> {
         ),
         actions: <Widget>[
           ButtonWithUnderline(
-            text: 'Invite',
+            text: 'Send',
             underLineColor: Color(0xFFf01b01),
             textColor: Color(0xFFf01b01),
             onPressed: () {

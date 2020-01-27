@@ -9,7 +9,7 @@ class MemberImages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(top: 8, bottom: 8),
       height: 48.0,
       width: 160.0,
       child: Stack(

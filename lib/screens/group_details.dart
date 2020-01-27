@@ -1,4 +1,5 @@
 import 'package:athlete_platform1/screens/edit_group.dart';
+import 'package:athlete_platform1/screens/invite_member.dart';
 import 'package:athlete_platform1/screens/member_listing.dart';
 import 'package:athlete_platform1/widgets/ButtonWithUnderline.dart';
 import 'package:athlete_platform1/widgets/member_images.dart';
@@ -107,98 +108,105 @@ class _GroupDetailsState extends State<GroupDetails> {
                     onPressed: () {},
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, MemberListing.id);
-                      },
-                      child: MemberImages(),
-                    ),
-                    ButtonWithUnderline(
-                      text: 'Invite',
-                      underLineColor: Color(0xFFf01b01),
-                      textColor: Color(0xFFf01b01),
-                      onPressed: () {},
-                    ),
-                  ],
-                ),
-                Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Column(
+                Container(
+                  padding: EdgeInsets.only(left: 13, right: 10),
+                  child: Column(
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Text(
-                            '2019 Holiday 4\'s Beach Volleyball Tournament.',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontFamily: 'Muli',
-                              fontWeight: FontWeight.w700,
-                            ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(context, MemberListing.id);
+                            },
+                            child: MemberImages(),
                           ),
-                          ListTile(
-                            contentPadding: EdgeInsets.all(0),
-                            leading: Container(
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(
-                                  color: Colors.grey.shade800,
-                                  width: 1,
-                                ),
-                              ),
-                              child: CircleAvatar(
-                                radius: 18,
-                                backgroundImage: AssetImage(
-                                  'images/person1.jpg',
-                                ),
-                              ),
-                            ),
-                            title: Text(
-                              'Dan Walker (Admin)',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontFamily: 'Muli',
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            subtitle: Text(
-                              'Coach, Consultant (Univerity of Calgory)',
-                              style: TextStyle(fontSize: 12),
-                            ),
-                          ),
-                          RichText(
-                            text: TextSpan(
-                              style: TextStyle(
-                                fontFamily: 'Muli',
-                                color: Colors.black,
-                                fontSize: 14,
-                              ),
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text:
-                                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur  ',
-                                ),
-                                TextSpan(
-                                  text: 'Read More',
-                                  style: TextStyle(
-                                    decoration: TextDecoration.underline,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () => print('Read More Clicked'),
-                                ),
-                              ],
-                            ),
+                          ButtonWithUnderline(
+                            text: 'Invite',
+                            underLineColor: Color(0xFFf01b01),
+                            textColor: Color(0xFFf01b01),
+                            onPressed: () {
+                              Navigator.pushNamed(context, InviteMember.id);
+                            },
                           ),
                         ],
                       ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 70,
+                      Column(
+                        children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              Text(
+                                '2019 Holiday 4\'s Beach Volleyball Tournament.',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontFamily: 'Muli',
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              ListTile(
+                                contentPadding: EdgeInsets.all(0),
+                                leading: Container(
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                      color: Colors.grey.shade800,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  child: CircleAvatar(
+                                    radius: 18,
+                                    backgroundImage: AssetImage(
+                                      'images/person1.jpg',
+                                    ),
+                                  ),
+                                ),
+                                title: Text(
+                                  'Dan Walker (Admin)',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontFamily: 'Muli',
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'Coach, Consultant (Univerity of Calgory)',
+                                  style: TextStyle(fontSize: 12),
+                                ),
+                              ),
+                              RichText(
+                                text: TextSpan(
+                                  style: TextStyle(
+                                    fontFamily: 'Muli',
+                                    color: Colors.black,
+                                    fontSize: 14,
+                                  ),
+                                  children: <TextSpan>[
+                                    TextSpan(
+                                      text:
+                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur  ',
+                                    ),
+                                    TextSpan(
+                                      text: 'Read More',
+                                      style: TextStyle(
+                                        decoration: TextDecoration.underline,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                      recognizer: TapGestureRecognizer()
+                                        ..onTap =
+                                            () => print('Read More Clicked'),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 70,
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),

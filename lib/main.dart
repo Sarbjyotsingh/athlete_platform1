@@ -2,6 +2,7 @@ import 'package:athlete_platform1/screens/create_group.dart';
 import 'package:athlete_platform1/screens/edit_group.dart';
 import 'package:athlete_platform1/screens/group_details.dart';
 import 'package:athlete_platform1/screens/group_listing.dart';
+import 'package:athlete_platform1/screens/invite_member.dart';
 import 'package:athlete_platform1/screens/member_listing.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +24,7 @@ class _MyAppState extends State<MyApp> {
         CreateGroup.id: (context) => CreateGroup(),
         EditGroup.id: (context) => EditGroup(),
         MemberListing.id: (context) => MemberListing(),
+        InviteMember.id: (context) => InviteMember(),
       },
     );
   }
