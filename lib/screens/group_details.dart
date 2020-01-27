@@ -1,5 +1,6 @@
 import 'package:athlete_platform1/screens/edit_group.dart';
 import 'package:athlete_platform1/screens/member_listing.dart';
+import 'package:athlete_platform1/widgets/ButtonWithUnderline.dart';
 import 'package:athlete_platform1/widgets/member_images.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -115,29 +116,10 @@ class _GroupDetailsState extends State<GroupDetails> {
                       },
                       child: MemberImages(),
                     ),
-                    FlatButton(
-                      child: Container(
-                        padding: EdgeInsets.all(5),
-                        margin: EdgeInsets.only(left: 5),
-                        decoration: BoxDecoration(
-                          border: Border(
-                            bottom: BorderSide(
-                              width: 2,
-                              color: Color(0xFFf01b01),
-                            ),
-                          ),
-                        ),
-                        child: Text(
-                          'Invite',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                            fontFamily: 'Muli',
-                            fontWeight: FontWeight.w700,
-                            color: Color(0xFFf01b01),
-                          ),
-                        ),
-                      ),
-                      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ButtonWithUnderline(
+                      text: 'Invite',
+                      underLineColor: Color(0xFFf01b01),
+                      textColor: Color(0xFFf01b01),
                       onPressed: () {},
                     ),
                   ],

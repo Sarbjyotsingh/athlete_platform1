@@ -1,3 +1,5 @@
+import 'package:athlete_platform1/widgets/ButtonWithUnderline.dart';
+import 'package:athlete_platform1/widgets/memeber_detail_card.dart';
 import 'package:flutter/material.dart';
 
 class MemberListing extends StatefulWidget {
@@ -35,35 +37,143 @@ class _MemberListingState extends State<MemberListing> {
           ],
         ),
         actions: <Widget>[
-          FlatButton(
-            child: Container(
-              padding: EdgeInsets.all(5),
-              margin: EdgeInsets.only(left: 5),
-              decoration: BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    width: 2,
-                    color: Color(0xFFf01b01),
-                  ),
-                ),
-              ),
-              child: Text(
-                'Invite',
-                style: TextStyle(
-                  fontSize: 18.0,
-                  fontFamily: 'Muli',
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xFFf01b01),
-                ),
-              ),
-            ),
-            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          ButtonWithUnderline(
+            text: 'Invite',
+            underLineColor: Color(0xFFf01b01),
+            textColor: Color(0xFFf01b01),
             onPressed: () {},
           ),
         ],
       ),
       body: SafeArea(
-        child: Container(),
+        child: SingleChildScrollView(
+          child: Container(
+            padding: EdgeInsets.all(10),
+            child: Column(
+              children: <Widget>[
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person1.jpg',
+                  ),
+                  title: 'Dan Walker (Admin)',
+                  subtitle: 'Coach',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person2.jpg',
+                  ),
+                  title: 'Lana Henrikssen',
+                  subtitle: 'Athelete',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person1.jpg',
+                  ),
+                  title: 'Nelly Schwartz',
+                  subtitle: 'Athelete',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person2.jpg',
+                  ),
+                  title: 'Azzouz El Paytoun',
+                  subtitle: 'Athelete @ university of calgary',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person1.jpg',
+                  ),
+                  title: 'Nikos Markopoulos',
+                  subtitle: 'Coach',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person2.jpg',
+                  ),
+                  title: 'Lana Henrikssen',
+                  subtitle: 'Athelete',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person1.jpg',
+                  ),
+                  title: 'Nelly Schwartz',
+                  subtitle: 'Athelete',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person2.jpg',
+                  ),
+                  title: 'Azzouz El Paytoun',
+                  subtitle: 'Athelete @ university of calgary',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person1.jpg',
+                  ),
+                  title: 'Nikos Markopoulos',
+                  subtitle: 'Coach',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person2.jpg',
+                  ),
+                  title: 'Lana Henrikssen',
+                  subtitle: 'Athelete',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person1.jpg',
+                  ),
+                  title: 'Nelly Schwartz',
+                  subtitle: 'Athelete',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person2.jpg',
+                  ),
+                  title: 'Azzouz El Paytoun',
+                  subtitle: 'Athelete @ university of calgary',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person1.jpg',
+                  ),
+                  title: 'Nikos Markopoulos',
+                  subtitle: 'Coach',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person2.jpg',
+                  ),
+                  title: 'Lana Henrikssen',
+                  subtitle: 'Athelete',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person1.jpg',
+                  ),
+                  title: 'Nelly Schwartz',
+                  subtitle: 'Athelete',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person2.jpg',
+                  ),
+                  title: 'Azzouz El Paytoun',
+                  subtitle: 'Athelete @ university of calgary',
+                ),
+                MemberDetailCard(
+                  backgroundImage: AssetImage(
+                    'images/person1.jpg',
+                  ),
+                  title: 'Nikos Markopoulos',
+                  subtitle: 'Coach',
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
